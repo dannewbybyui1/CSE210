@@ -5,7 +5,7 @@ public class EternalGoal : Goal
 
     public override void RecordEvent(ref int score)
     {
-        score += points;
+        score += _points;
     }
 
     public override bool IsComplete() => false;
@@ -15,5 +15,5 @@ public class EternalGoal : Goal
     public override string GetGoalType() => "EternalGoal";
 
     public override string SaveData() =>
-        $"{GetGoalType()}|{name}|{description}|{points}";
+        $"{GetGoalType()}|{_name}|{_description}|{_points}";
 }

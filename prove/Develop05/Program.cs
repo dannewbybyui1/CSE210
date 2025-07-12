@@ -112,7 +112,7 @@ public class Program
         for (int i = 0; i < goals.Count; i++)
         {
             var goal = goals[i];
-            Console.WriteLine($"{i + 1}. {goal.GetStatus()} {goal.Name} ({goal.Description})");
+            Console.WriteLine($"{i + 1}. {goal.GetStatus()} {goal.GetName()} ({goal.GetDescription()})");
         }
     }
 

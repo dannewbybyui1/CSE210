@@ -2,18 +2,18 @@ using System;
 
 public abstract class Goal
 {
-    protected string name;
-    protected string description;
-    protected int points;
+    protected string _name;
+    protected string _description;
+    protected int _points;
 
-    public string Name => name;
-    public string Description => description;
+    public string GetName() { return _name; }
+    public string GetDescription() { return _description; }
 
     public Goal(string name, string description, int points)
     {
-        this.name = name;
-        this.description = description;
-        this.points = points;
+        this._name = name;
+        this._description = description;
+        this._points = points;
     }
 
     public abstract void RecordEvent(ref int score);

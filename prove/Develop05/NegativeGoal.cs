@@ -1,28 +1,28 @@
 public class NegativeGoal : Goal
 {
-    private bool triggered;
+    private bool _triggered;
 
     public NegativeGoal(string name, string description, int points, bool triggered = false)
         : base(name, description, points)
     {
-        this.triggered = triggered;
+        this._triggered = triggered;
     }
 
     public override void RecordEvent(ref int score)
     {
-        if (!triggered)
+        if (!_triggered)
         {
-            score -= points;
-            triggered = true;
+            score -= _points;
+            _triggered = true;
         }
     }
 
-    public override bool IsComplete() => triggered;
+    public override bool IsComplete() => _triggered;
 
-    public override string GetStatus() => triggered ? "[X BAD]" : "[!BAD!]";
+    public override string GetStatus() => _triggered ? "[X BAD]" : "[!BAD!]";
 
     public override string GetGoalType() => "NegativeGoal";
 
     public override string SaveData() =>
-        $"{GetGoalType()}|{name}|{description}|{points}|{triggered}";
+        $"{GetGoalType()}|{_name}|{_description}|{_points}|{_triggered}";
 }
