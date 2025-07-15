@@ -1,9 +1,27 @@
 using System;
+using System.Collections.Generic;
 
-class Program
+namespace BookManager
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello FinalProject World!");
+        static void Main(string[] args)
+        {
+            List<_Book> bookCollection = new List<_Book>
+            {
+                new _FictionBook("The Hobbit", "J.R.R. Tolkien", "Fantasy"),
+                new _NonFictionBook("Educated", "Tara Westover", "Memoir"),
+                new _PoetryBook("Milk and Honey", "Rupi Kaur", 204),
+                new _FictionBook("1984", "George Orwell", "Dystopian"),
+                new _NonFictionBook("Sapiens", "Yuval Noah Harari", "History")
+            };
+
+            Console.WriteLine("📚 Book Collection:\n");
+
+            foreach (_Book book in bookCollection)
+            {
+                book.DisplayDetails();
+            }
+        }
     }
 }
