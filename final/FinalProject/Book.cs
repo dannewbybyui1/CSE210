@@ -1,11 +1,11 @@
 namespace BookManager
 {
-    public class _Book
+    public class Book
     {
         protected string _title;
         protected string _author;
 
-        public _Book(string title, string author)
+        public Book(string title, string author)
         {
             _title = title;
             _author = author;

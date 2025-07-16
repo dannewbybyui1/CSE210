@@ -1,10 +1,10 @@
 namespace BookManager
 {
-    public class _FictionBook : _Book
+    public class FictionBook : Book
     {
         private string _genre;
 
-        public _FictionBook(string title, string author, string genre) 
+        public FictionBook(string title, string author, string genre) 
             : base(title, author)
         {
             _genre = genre;

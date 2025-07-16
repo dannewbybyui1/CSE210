@@ -1,10 +1,10 @@
 namespace BookManager
 {
-    public class _NonFictionBook : _Book
+    public class NonFictionBook : Book
     {
         private string _subject;
 
-        public _NonFictionBook(string title, string author, string subject) 
+        public NonFictionBook(string title, string author, string subject) 
             : base(title, author)
         {
             _subject = subject;
